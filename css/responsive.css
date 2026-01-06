@@ -30,6 +30,77 @@
         max-width: 100%;
         width: 100%;
     }
+    
+    /* About Page */
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .story-text {
+        padding-right: 0;
+    }
+    
+    .core-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .vision-mission-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact Page */
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    /* Safaris Page */
+    .safari-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .safari-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Tours/Hotels/Flights Listing */
+    .tours-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters-sidebar {
+        position: static;
+    }
+    
+    /* Hotel Cards */
+    .hotel-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .hotel-image {
+        height: 250px;
+    }
+    
+    .hotel-pricing {
+        border-left: none;
+        border-top: 1px solid var(--color-border);
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    /* Visa Page */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .process-steps::before {
+        display: none;
+    }
 }
 
 /* ========== MOBILE (max-width: 768px) ========== */
@@ -176,6 +247,139 @@
         right: 20px;
         width: 45px;
         height: 45px;
+    }
+    
+    /* About Page */
+    .story-img {
+        height: 350px;
+    }
+    
+    .core-values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Safaris Page */
+    .safari-grid,
+    .safari-types-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Tours/Hotels/Flights Search */
+    .hotel-search-box,
+    .flight-search-box {
+        padding: var(--spacing-lg);
+    }
+    
+    .search-input-group {
+        min-width: 100%;
+    }
+    
+    .flight-search-form {
+        flex-direction: column;
+    }
+    
+    .swap-btn {
+        margin: 0;
+        align-self: center;
+        transform: rotate(90deg);
+    }
+    
+    .trip-type-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .trip-tab {
+        flex: 1 1 45%;
+        padding: 10px 14px;
+        font-size: var(--text-xs);
+    }
+    
+    /* Flight Cards */
+    .flight-segment {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+    
+    .flight-duration {
+        padding: 0;
+        order: -1;
+    }
+    
+    .flight-line {
+        width: 200px;
+        margin: 0 auto;
+    }
+    
+    .flight-footer {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .flight-features {
+        justify-content: center;
+    }
+    
+    .flight-price {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .flight-price .btn {
+        width: 100%;
+    }
+    
+    /* Hotel Cards Mobile */
+    .hotel-pricing {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .guest-rating {
+        justify-content: center;
+    }
+    
+    .price-info {
+        text-align: center;
+    }
+    
+    .price-info .btn {
+        width: 100%;
+    }
+    
+    /* Visa Page */
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: var(--text-xl);
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+    
+    /* Results Header */
+    .results-header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+    
+    .results-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .sort-select {
+        flex: 1;
     }
 }
 
