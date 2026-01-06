@@ -1,0 +1,318 @@
+/* ==========================================
+   TARATOURS - RESPONSIVE STYLES
+   Mobile-First Approach
+   ========================================== */
+
+/* ========== TABLET (max-width: 1024px) ========== */
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .newsletter-form {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* ========== MOBILE (max-width: 768px) ========== */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 80px;
+        --navbar-height: 70px;
+    }
+    
+    /* Navigation */
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: var(--color-bg-elevated);
+        border-left: 1px solid var(--color-border);
+        flex-direction: column;
+        padding: 100px 32px 32px;
+        gap: 8px;
+        transition: right var(--transition-base);
+    }
+    
+    .navbar-menu.active {
+        right: 0;
+    }
+    
+    .navbar-menu li {
+        width: 100%;
+    }
+    
+    .navbar-menu li a {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        text-align: left;
+    }
+    
+    .navbar-menu li a.btn {
+        margin-left: 0;
+        margin-top: 16px;
+        text-align: center;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: clamp(32px, 8vw, 48px);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-lg);
+    }
+    
+    .hero-search-widget {
+        padding: var(--spacing-lg);
+    }
+    
+    .search-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .search-tab {
+        flex: 1 1 45%;
+        padding: 12px 16px;
+        font-size: var(--text-sm);
+    }
+    
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Grids */
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Destinations */
+    .destination-card {
+        height: 300px;
+    }
+    
+    /* Newsletter */
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input,
+    .newsletter-form .btn {
+        width: 100%;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    /* Buttons */
+    .btn-large {
+        padding: 14px 28px;
+        font-size: var(--text-base);
+    }
+    
+    /* WhatsApp */
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .whatsapp-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .back-to-top {
+        bottom: 90px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ========== SMALL MOBILE (max-width: 480px) ========== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    .hero-badge {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: var(--text-base);
+    }
+    
+    .search-tab {
+        flex: 1 1 100%;
+    }
+    
+    .card-body {
+        padding: var(--spacing-lg);
+    }
+    
+    .service-card,
+    .feature-box,
+    .testimonial-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .service-icon,
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        font-size: var(--text-2xl);
+    }
+    
+    .destination-card {
+        height: 250px;
+    }
+    
+    .newsletter-section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .newsletter-text h2 {
+        font-size: var(--text-2xl);
+    }
+    
+    .footer {
+        padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    }
+    
+    .footer-section h3 {
+        font-size: var(--text-lg);
+    }
+}
+
+/* ========== LARGE SCREENS (min-width: 1400px) ========== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: var(--container-2xl);
+    }
+    
+    .hero-title {
+        font-size: var(--text-7xl);
+    }
+    
+    .section-title {
+        font-size: var(--text-5xl);
+    }
+}
+
+/* ========== HOVER STATES FOR TOUCH DEVICES ========== */
+@media (hover: none) {
+    .card:hover,
+    .service-card:hover,
+    .feature-box:hover,
+    .testimonial-card:hover,
+    .destination-card:hover {
+        transform: none;
+    }
+    
+    .destination-overlay .btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== REDUCED MOTION ========== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+    .navbar,
+    .back-to-top,
+    .whatsapp-float,
+    .newsletter-section {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .section {
+        padding: 20px 0;
+    }
+}

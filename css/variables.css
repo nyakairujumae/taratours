@@ -1,0 +1,163 @@
+/* ==========================================
+   TARATOURS - CSS VARIABLES
+   Modern Safari Theme
+   ========================================== */
+
+:root {
+    /* ========== COLOR PALETTE ========== */
+    
+    /* Primary - Safari Orange/Amber */
+    --primary-color: #d97706;
+    --primary-light: #f59e0b;
+    --primary-dark: #b45309;
+    
+    /* Accent - Deep Forest Green */
+    --accent-color: #166534;
+    --accent-light: #22c55e;
+    --accent-dark: #14532d;
+    
+    /* Neutrals - Warm tones */
+    --color-bg: #0f0f0d;
+    --color-bg-elevated: #1a1917;
+    --color-bg-card: #1f1e1b;
+    --color-bg-card-hover: #2a2824;
+    --color-surface: #252420;
+    
+    /* Text Colors */
+    --color-text: #faf9f7;
+    --color-text-secondary: #a8a5a0;
+    --color-text-muted: #6b6860;
+    
+    /* Borders */
+    --color-border: #3a3830;
+    --color-border-light: #4a4840;
+    
+    /* Legacy variables for compatibility */
+    --white: #ffffff;
+    --black: #000000;
+    --gray-50: #fafaf9;
+    --gray-100: #f5f5f4;
+    --gray-200: #e7e5e4;
+    --gray-300: #d6d3d1;
+    --gray-400: #a8a29e;
+    --gray-500: #78716c;
+    --gray-600: #57534e;
+    --gray-700: #44403c;
+    --gray-800: #292524;
+    --gray-900: #1c1917;
+    
+    /* Semantic Colors */
+    --success-color: #22c55e;
+    --warning-color: #f59e0b;
+    --error-color: #ef4444;
+    --info-color: #3b82f6;
+    
+    /* Background */
+    --bg-primary: var(--color-bg);
+    --bg-secondary: var(--color-bg-elevated);
+    
+    /* Text */
+    --text-primary: var(--color-text);
+    --text-secondary: var(--color-text-secondary);
+    --text-white: #ffffff;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+    --gradient-text: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light) 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(217, 119, 6, 0.9) 0%, rgba(22, 101, 52, 0.9) 100%);
+    --gradient-bg: radial-gradient(ellipse at 50% 0%, rgba(217, 119, 6, 0.15) 0%, transparent 50%);
+    
+    /* ========== TYPOGRAPHY ========== */
+    --font-primary: 'Syne', sans-serif;
+    --font-secondary: 'Outfit', sans-serif;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    
+    /* Font Sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 3.75rem;
+    --text-7xl: 4.5rem;
+    
+    /* Font Weights */
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    
+    /* Line Heights */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+    
+    /* ========== SPACING ========== */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    --spacing-4xl: 6rem;
+    --spacing-5xl: 8rem;
+    
+    /* ========== LAYOUT ========== */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1400px;
+    --navbar-height: 80px;
+    --section-padding: 120px;
+    
+    /* ========== BORDERS ========== */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+    
+    /* ========== SHADOWS ========== */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 40px rgba(217, 119, 6, 0.3);
+    
+    /* ========== TRANSITIONS ========== */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    --transition-slower: 0.7s ease;
+    
+    /* ========== Z-INDEX ========== */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal-backdrop: 400;
+    --z-modal: 500;
+    --z-popover: 600;
+    --z-tooltip: 700;
+}
+
+/* Dark mode is default - light mode override if needed */
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Keep dark theme for safari aesthetic */
+    }
+}

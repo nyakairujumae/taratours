@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our selection of amazing tour packages">
+  <title>Tour Packages - TaraTours</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="images/logo/logo.png" alt="TaraTours Logo" class="brand-logo">
+        TaraTours
+      </a>
+      
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tours.html" class="active">Tours</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="flights.html">Flights</a></li>
+        <li><a href="visa.html">Visa</a></li>
+        <li><a href="safaris.html">Safaris</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" class="btn btn-primary">Book Now</a></li>
+      </ul>
+      
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Explore Tour Packages</h1>
+      <p>Discover amazing destinations with our curated tour experiences</p>
+    </div>
+  </section>
+
+  <!-- Tours Section with Filters -->
+  <section class="section tours-listing-section">
+    <div class="container">
+      <div class="tours-layout">
+        
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar">
+          <div class="filter-header">
+            <h3>Filters</h3>
+            <button class="filter-reset">Reset All</button>
+          </div>
+          
+          <!-- Search Filter -->
+          <div class="filter-group">
+            <label>Search Tours</label>
+            <div class="search-input">
+              <i class="fas fa-search"></i>
+              <input type="text" placeholder="Search destinations...">
+            </div>
+          </div>
+          
+          <!-- Price Range Filter -->
+          <div class="filter-group">
+            <label>Price Range</label>
+            <div class="price-range">
+              <input type="number" placeholder="Min" value="0">
+              <span>-</span>
+              <input type="number" placeholder="Max" value="5000">
+            </div>
+          </div>
+          
+          <!-- Duration Filter -->
+          <div class="filter-group">
+            <label>Duration</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="duration" value="1-3">
+                <span>1-3 Days</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="duration" value="4-7">
+                <span>4-7 Days</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="duration" value="8-14">
+                <span>8-14 Days</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="duration" value="15+">
+                <span>15+ Days</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Category Filter -->
+          <div class="filter-group">
+            <label>Category</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="category" value="adventure">
+                <span>Adventure</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="category" value="cultural">
+                <span>Cultural</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="category" value="luxury">
+                <span>Luxury</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="category" value="beach">
+                <span>Beach & Islands</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="category" value="wildlife">
+                <span>Wildlife</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Rating Filter -->
+          <div class="filter-group">
+            <label>Minimum Rating</label>
+            <div class="rating-filter">
+              <button class="rating-btn">1+ <i class="fas fa-star"></i></button>
+              <button class="rating-btn">2+ <i class="fas fa-star"></i></button>
+              <button class="rating-btn">3+ <i class="fas fa-star"></i></button>
+              <button class="rating-btn active">4+ <i class="fas fa-star"></i></button>
+              <button class="rating-btn">5 <i class="fas fa-star"></i></button>
+            </div>
+          </div>
+          
+        </aside>
+        
+        <!-- Tours Content -->
+        <div class="tours-content">
+          
+          <!-- Results Header -->
+          <div class="results-header">
+            <div class="results-info">
+              <h3>Showing 12 tours</h3>
+            </div>
+            <div class="results-controls">
+              <select class="sort-select">
+                <option value="popular">Most Popular</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+                <option value="duration">Duration</option>
+              </select>
+              <div class="view-toggle">
+                <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tours Grid -->
+          <div class="tours-grid grid grid-3">
+            
+            <!-- Tour Card 1 -->
+            <div class="tour-card card">
+              <div class="tour-image">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop" alt="Paris Tour" class="card-img">
+                <div class="tour-badge">Popular</div>
+                <div class="tour-price">$1,299</div>
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="tour-meta">
+                  <span><i class="fas fa-clock"></i> 7 Days</span>
+                  <span><i class="fas fa-star"></i> 4.9 (128)</span>
+                </div>
+                <h3 class="card-title">Paris & French Riviera</h3>
+                <p class="card-text">Experience the romance of Paris and the stunning beaches of the French Riviera.</p>
+                <div class="tour-features">
+                  <span><i class="fas fa-hotel"></i> Hotels</span>
+                  <span><i class="fas fa-utensils"></i> Meals</span>
+                  <span><i class="fas fa-bus"></i> Transport</span>
+                </div>
+                <a href="tour-details.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+            
+            <!-- Tour Card 2 -->
+            <div class="tour-card card">
+              <div class="tour-image">
+                <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&h=400&fit=crop" alt="Rome Tour" class="card-img">
+                <div class="tour-badge hot">Hot Deal</div>
+                <div class="tour-price">$999</div>
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="tour-meta">
+                  <span><i class="fas fa-clock"></i> 5 Days</span>
+                  <span><i class="fas fa-star"></i> 4.8 (95)</span>
+                </div>
+                <h3 class="card-title">Ancient Rome Explorer</h3>
+                <p class="card-text">Walk through history in the eternal city, exploring iconic landmarks.</p>
+                <div class="tour-features">
+                  <span><i class="fas fa-hotel"></i> Hotels</span>
+                  <span><i class="fas fa-utensils"></i> Meals</span>
+                  <span><i class="fas fa-user-tie"></i> Guide</span>
+                </div>
+                <a href="tour-details.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+            
+            <!-- Tour Card 3 -->
+            <div class="tour-card card">
+              <div class="tour-image">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" alt="Swiss Alps" class="card-img">
+                <div class="tour-badge">New</div>
+                <div class="tour-price">$1,599</div>
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="tour-meta">
+                  <span><i class="fas fa-clock"></i> 6 Days</span>
+                  <span><i class="fas fa-star"></i> 5.0 (42)</span>
+                </div>
+                <h3 class="card-title">Swiss Alps Adventure</h3>
+                <p class="card-text">Breathtaking mountain scenery, charming villages, and alpine experiences.</p>
+                <div class="tour-features">
+                  <span><i class="fas fa-hotel"></i> Hotels</span>
+                  <span><i class="fas fa-mountain"></i> Activities</span>
+                  <span><i class="fas fa-train"></i> Rail Pass</span>
+                </div>
+                <a href="tour-details.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+            
+            <!-- Tour Card 4 -->
+            <div class="tour-card card">
+              <div class="tour-image">
+                <img src="https://images.unsplash.com/photo-1543731068-6e82a00c2e5f?w=600&h=400&fit=crop" alt="Maldives" class="card-img">
+                <div class="tour-badge">Luxury</div>
+                <div class="tour-price">$2,499</div>
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="tour-meta">
+                  <span><i class="fas fa-clock"></i> 8 Days</span>
+                  <span><i class="fas fa-star"></i> 4.9 (210)</span>
+                </div>
+                <h3 class="card-title">Maldives Paradise Retreat</h3>
+                <p class="card-text">Luxury overwater villas, pristine beaches, and turquoise waters.</p>
+                <div class="tour-features">
+                  <span><i class="fas fa-hotel"></i> 5-Star Resort</span>
+                  <span><i class="fas fa-spa"></i> Spa</span>
+                  <span><i class="fas fa-swimmer"></i> Water Sports</span>
+                </div>
+                <a href="tour-details.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+            
+            <!-- Tour Card 5 -->
+            <div class="tour-card card">
+              <div class="tour-image">
+                <img src="https://images.unsplash.com/photo-1549144511-f099e773c147?w=600&h=400&fit=crop" alt="Dubai" class="card-img">
+                <div class="tour-price">$1,799</div>
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="tour-meta">
+                  <span><i class="fas fa-clock"></i> 5 Days</span>
+                  <span><i class="fas fa-star"></i> 4.7 (156)</span>
+                </div>
+                <h3 class="card-title">Dubai Extravaganza</h3>
+                <p class="card-text">Experience the modern marvels and luxury of Dubai.</p>
+                <div class="tour-features">
+                  <span><i class="fas fa-hotel"></i> Hotels</span>
+                  <span><i class="fas fa-ticket-alt"></i> Attractions</span>
+                  <span><i class="fas fa-utensils"></i> Meals</span>
+                </div>
+                <a href="tour-details.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+            
+            <!-- Tour Card 6 -->
+            <div class="tour-card card">
+              <div class="tour-image">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=400&fit=crop" alt="London" class="card-img">
+                <div class="tour-price">$1,199</div>
+                <button class="wishlist-btn"><i class="far fa-heart"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="tour-meta">
+                  <span><i class="fas fa-clock"></i> 6 Days</span>
+                  <span><i class="fas fa-star"></i> 4.8 (89)</span>
+                </div>
+                <h3 class="card-title">London Cultural Journey</h3>
+                <p class="card-text">Explore British history, culture, and iconic landmarks.</p>
+                <div class="tour-features">
+                  <span><i class="fas fa-hotel"></i> Hotels</span>
+                  <span><i class="fas fa-landmark"></i> Museums</span>
+                  <span><i class="fas fa-user-tie"></i> Guide</span>
+                </div>
+                <a href="tour-details.html" class="btn btn-primary">View Details</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Pagination -->
+          <div class="pagination">
+            <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn">4</button>
+            <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-plane-departure"></i> TaraTours</h3>
+          <p>Your trusted partner for unforgettable travel experiences.</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="tours.html">Tours & Packages</a></li>
+            <li><a href="hotels.html">Hotel Booking</a></li>
+            <li><a href="flights.html">Flight Tickets</a></li>
+            <li><a href="visa.html">Visa Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@taratours.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 TaraTours. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- JavaScript -->
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/256703900937" target="_blank" class="whatsapp-link">
+      <div class="whatsapp-tooltip">Need Help? Chat with us</div>
+      <div class="whatsapp-icon">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/filters.js"></script>
+
+</body>
+</html>
+
+

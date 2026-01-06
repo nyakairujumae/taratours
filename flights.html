@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find and book cheap flights worldwide">
+  <title>Flight Booking - TaraTours</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="images/logo/logo.png" alt="TaraTours Logo" class="brand-logo">
+        TaraTours
+      </a>
+      
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="flights.html" class="active">Flights</a></li>
+        <li><a href="visa.html">Visa</a></li>
+        <li><a href="safaris.html">Safaris</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" class="btn btn-primary">Book Now</a></li>
+      </ul>
+      
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Flight Search Header -->
+  <section class="flight-search-header">
+    <div class="container">
+      <h1>Find Cheap Flights</h1>
+      <p>Compare prices from hundreds of airlines</p>
+      
+      <div class="flight-search-box">
+        <!-- Trip Type Selector -->
+        <div class="trip-type-tabs">
+          <button class="trip-tab active" data-trip="roundtrip">
+            <i class="fas fa-exchange-alt"></i> Round Trip
+          </button>
+          <button class="trip-tab" data-trip="oneway">
+            <i class="fas fa-long-arrow-alt-right"></i> One Way
+          </button>
+          <button class="trip-tab" data-trip="multicity">
+            <i class="fas fa-map-marked-alt"></i> Multi-City
+          </button>
+        </div>
+        
+        <!-- Search Form -->
+        <div class="flight-search-form">
+          <div class="search-input-group">
+            <i class="fas fa-plane-departure"></i>
+            <input type="text" placeholder="From where?" value="New York (JFK)">
+            <span class="input-label">From</span>
+          </div>
+          
+          <button class="swap-btn" title="Swap locations">
+            <i class="fas fa-exchange-alt"></i>
+          </button>
+          
+          <div class="search-input-group">
+            <i class="fas fa-plane-arrival"></i>
+            <input type="text" placeholder="Where to?" value="Paris (CDG)">
+            <span class="input-label">To</span>
+          </div>
+          
+          <div class="search-input-group">
+            <i class="fas fa-calendar"></i>
+            <input type="date" value="2024-12-15">
+            <span class="input-label">Departure</span>
+          </div>
+          
+          <div class="search-input-group" id="returnDate">
+            <i class="fas fa-calendar"></i>
+            <input type="date" value="2024-12-22">
+            <span class="input-label">Return</span>
+          </div>
+          
+          <div class="search-input-group">
+            <i class="fas fa-users"></i>
+            <select>
+              <option>1 Passenger, Economy</option>
+              <option>1 Passenger, Business</option>
+              <option>2 Passengers, Economy</option>
+              <option>3 Passengers, Economy</option>
+              <option>4+ Passengers</option>
+            </select>
+          </div>
+          
+          <button class="btn btn-accent btn-large">
+            <i class="fas fa-search"></i> Search Flights
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flights Listing Section -->
+  <section class="section flights-listing-section">
+    <div class="container">
+      <div class="tours-layout">
+        
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar">
+          <div class="filter-header">
+            <h3>Filters</h3>
+            <button class="filter-reset">Reset All</button>
+          </div>
+          
+          <!-- Price Range -->
+          <div class="filter-group">
+            <label>Price Range</label>
+            <div class="price-range">
+              <input type="number" placeholder="Min" value="0">
+              <span>-</span>
+              <input type="number" placeholder="Max" value="2000">
+            </div>
+          </div>
+          
+          <!-- Stops -->
+          <div class="filter-group">
+            <label>Stops</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="stops" value="nonstop">
+                <span>Non-stop</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="stops" value="1stop">
+                <span>1 Stop</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="stops" value="2stops">
+                <span>2+ Stops</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Airlines -->
+          <div class="filter-group">
+            <label>Airlines</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="airline" value="delta">
+                <span>Delta Airlines</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="airline" value="american">
+                <span>American Airlines</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="airline" value="united">
+                <span>United Airlines</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="airline" value="lufthansa">
+                <span>Lufthansa</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="airline" value="airfrance">
+                <span>Air France</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- Departure Time -->
+          <div class="filter-group">
+            <label>Departure Time</label>
+            <div class="time-filter">
+              <button class="time-btn">
+                <i class="fas fa-sun"></i> Morning<br><small>6am - 12pm</small>
+              </button>
+              <button class="time-btn">
+                <i class="fas fa-cloud-sun"></i> Afternoon<br><small>12pm - 6pm</small>
+              </button>
+              <button class="time-btn">
+                <i class="fas fa-moon"></i> Evening<br><small>6pm - 12am</small>
+              </button>
+              <button class="time-btn">
+                <i class="fas fa-star"></i> Night<br><small>12am - 6am</small>
+              </button>
+            </div>
+          </div>
+          
+        </aside>
+        
+        <!-- Flights Content -->
+        <div class="tours-content">
+          
+          <!-- Results Header -->
+          <div class="results-header">
+            <div class="results-info">
+              <h3>New York (JFK) → Paris (CDG)</h3>
+              <p class="search-dates">Dec 15 - Dec 22, 2024 • 1 Passenger • Economy</p>
+            </div>
+            <div class="results-controls">
+              <select class="sort-select">
+                <option value="recommended">Best</option>
+                <option value="cheapest">Cheapest</option>
+                <option value="fastest">Fastest</option>
+                <option value="earliest">Earliest Departure</option>
+                <option value="latest">Latest Departure</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Flights List -->
+          <div class="flights-list">
+            
+            <!-- Flight Card 1 -->
+            <div class="flight-card">
+              <div class="flight-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Delta_logo.svg/200px-Delta_logo.svg.png" alt="Delta" class="airline-logo">
+                <span class="airline-name">Delta Airlines • DL 456</span>
+                <span class="flight-badge">Best Value</span>
+              </div>
+              
+              <div class="flight-details">
+                <div class="flight-segment">
+                  <div class="flight-time">
+                    <span class="time">10:30 AM</span>
+                    <span class="airport">JFK</span>
+                  </div>
+                  <div class="flight-duration">
+                    <span class="duration-text">7h 45m</span>
+                    <div class="flight-line">
+                      <div class="flight-dot"></div>
+                      <div class="flight-path"></div>
+                      <div class="flight-dot"></div>
+                    </div>
+                    <span class="stops-text">Non-stop</span>
+                  </div>
+                  <div class="flight-time">
+                    <span class="time">6:15 AM+1</span>
+                    <span class="airport">CDG</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flight-footer">
+                <div class="flight-features">
+                  <span><i class="fas fa-suitcase-rolling"></i> 2 Bags</span>
+                  <span><i class="fas fa-utensils"></i> Meal</span>
+                  <span><i class="fas fa-wifi"></i> WiFi</span>
+                </div>
+                <div class="flight-price">
+                  <div class="price">$649</div>
+                  <button class="btn btn-primary">Select</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Flight Card 2 -->
+            <div class="flight-card">
+              <div class="flight-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/United_Airlines_Logo.svg/200px-United_Airlines_Logo.svg.png" alt="United" class="airline-logo">
+                <span class="airline-name">United Airlines • UA 789</span>
+                <span class="flight-badge fastest">Fastest</span>
+              </div>
+              
+              <div class="flight-details">
+                <div class="flight-segment">
+                  <div class="flight-time">
+                    <span class="time">2:15 PM</span>
+                    <span class="airport">JFK</span>
+                  </div>
+                  <div class="flight-duration">
+                    <span class="duration-text">7h 30m</span>
+                    <div class="flight-line">
+                      <div class="flight-dot"></div>
+                      <div class="flight-path"></div>
+                      <div class="flight-dot"></div>
+                    </div>
+                    <span class="stops-text">Non-stop</span>
+                  </div>
+                  <div class="flight-time">
+                    <span class="time">9:45 AM+1</span>
+                    <span class="airport">CDG</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flight-footer">
+                <div class="flight-features">
+                  <span><i class="fas fa-suitcase-rolling"></i> 2 Bags</span>
+                  <span><i class="fas fa-utensils"></i> Meal</span>
+                  <span><i class="fas fa-tv"></i> Entertainment</span>
+                </div>
+                <div class="flight-price">
+                  <div class="price">$695</div>
+                  <button class="btn btn-primary">Select</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Flight Card 3 (1 Stop) -->
+            <div class="flight-card">
+              <div class="flight-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lufthansa_Logo_2018.svg/200px-Lufthansa_Logo_2018.svg.png" alt="Lufthansa" class="airline-logo">
+                <span class="airline-name">Lufthansa • LH 412</span>
+                <span class="flight-badge cheapest">Cheapest</span>
+              </div>
+              
+              <div class="flight-details">
+                <div class="flight-segment">
+                  <div class="flight-time">
+                    <span class="time">6:00 PM</span>
+                    <span class="airport">JFK</span>
+                  </div>
+                  <div class="flight-duration">
+                    <span class="duration-text">11h 20m</span>
+                    <div class="flight-line">
+                      <div class="flight-dot"></div>
+                      <div class="flight-path"></div>
+                      <div class="flight-stop">1</div>
+                      <div class="flight-path"></div>
+                      <div class="flight-dot"></div>
+                    </div>
+                    <span class="stops-text">1 Stop (FRA)</span>
+                  </div>
+                  <div class="flight-time">
+                    <span class="time">11:20 AM+1</span>
+                    <span class="airport">CDG</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flight-footer">
+                <div class="flight-features">
+                  <span><i class="fas fa-suitcase-rolling"></i> 1 Bag</span>
+                  <span><i class="fas fa-utensils"></i> Meal</span>
+                </div>
+                <div class="flight-price">
+                  <div class="price">$499</div>
+                  <button class="btn btn-primary">Select</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Flight Card 4 -->
+            <div class="flight-card">
+              <div class="flight-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/200px-Air_France_Logo.svg.png" alt="Air France" class="airline-logo">
+                <span class="airline-name">Air France • AF 007</span>
+              </div>
+              
+              <div class="flight-details">
+                <div class="flight-segment">
+                  <div class="flight-time">
+                    <span class="time">8:45 PM</span>
+                    <span class="airport">JFK</span>
+                  </div>
+                  <div class="flight-duration">
+                    <span class="duration-text">7h 50m</span>
+                    <div class="flight-line">
+                      <div class="flight-dot"></div>
+                      <div class="flight-path"></div>
+                      <div class="flight-dot"></div>
+                    </div>
+                    <span class="stops-text">Non-stop</span>
+                  </div>
+                  <div class="flight-time">
+                    <span class="time">10:35 AM+1</span>
+                    <span class="airport">CDG</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flight-footer">
+                <div class="flight-features">
+                  <span><i class="fas fa-suitcase-rolling"></i> 2 Bags</span>
+                  <span><i class="fas fa-utensils"></i> Meal</span>
+                  <span><i class="fas fa-wifi"></i> WiFi</span>
+                  <span><i class="fas fa-tv"></i> Entertainment</span>
+                </div>
+                <div class="flight-price">
+                  <div class="price">$729</div>
+                  <button class="btn btn-primary">Select</button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Pagination -->
+          <div class="pagination">
+            <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-plane-departure"></i> TaraTours</h3>
+          <p>Your trusted partner for unforgettable travel experiences.</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="tours.html">Tours & Packages</a></li>
+            <li><a href="hotels.html">Hotel Booking</a></li>
+            <li><a href="flights.html">Flight Tickets</a></li>
+            <li><a href="visa.html">Visa Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@taratours.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 TaraTours. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/filters.js"></script>
+  <script>
+    // Trip type toggle
+    document.querySelectorAll('.trip-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.trip-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        
+        const tripType = this.getAttribute('data-trip');
+        const returnDate = document.getElementById('returnDate');
+        
+        if (tripType === 'oneway') {
+          returnDate.style.display = 'none';
+        } else {
+          returnDate.style.display = 'flex';
+        }
+      });
+    });
+    
+    // Swap locations
+    document.querySelector('.swap-btn').addEventListener('click', function() {
+      const from = document.querySelector('.flight-search-form .search-input-group:nth-child(1) input');
+      const to = document.querySelector('.flight-search-form .search-input-group:nth-child(3) input');
+      const temp = from.value;
+      from.value = to.value;
+      to.value = temp;
+    });
+  </script>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/256703900937" target="_blank" class="whatsapp-link">
+      <div class="whatsapp-tooltip">Need Help? Chat with us</div>
+      <div class="whatsapp-icon">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </a>
+  </div>
+
+</body>
+</html>
+
+

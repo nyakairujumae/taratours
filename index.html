@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaraTours - Your trusted partner for East African safaris, tours, hotels, flights, and visa processing. Explore Kenya, Tanzania, Uganda, Rwanda & Congo.">
+    <meta name="keywords" content="safari tours, East Africa, Kenya safari, Tanzania safari, Uganda gorilla trekking, Rwanda tours, Congo wildlife, travel agency">
+    <title>TaraTours | East African Safari & Travel Experts</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo/logo.png">
+</head>
+<body>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="images/logo/logo.png" alt="TaraTours Logo" class="brand-logo">
+                <span>TaraTours</span>
+            </a>
+            
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="safaris.html">Safaris</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="hotels.html">Lodges</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="visa.html">Visa</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn btn-primary">Book Now</a></li>
+            </ul>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="images/vid1.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    East Africa's Premier Safari Experts
+                </div>
+                
+                <h1 class="hero-title">
+                    Discover <span class="text-gradient">East Africa's</span><br>
+                    Untamed Wildlife
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Experience the magic of Kenya, Tanzania, Uganda, Rwanda & Congo with expert safari guides. 
+                    Personalized safaris, hassle-free travel services, and unforgettable adventures await.
+                </p>
+                
+                <!-- Search Widget -->
+                <div class="hero-search-widget">
+                    <div class="search-tabs">
+                        <button class="search-tab active" data-tab="tours">
+                            <i class="fas fa-paw"></i> Safaris
+                        </button>
+                        <button class="search-tab" data-tab="hotels">
+                            <i class="fas fa-campground"></i> Lodges
+                        </button>
+                        <button class="search-tab" data-tab="flights">
+                            <i class="fas fa-plane"></i> Flights
+                        </button>
+                        <button class="search-tab" data-tab="visa">
+                            <i class="fas fa-passport"></i> Visa
+                        </button>
+                    </div>
+                    
+                    <div class="search-form-container">
+                        <!-- Safari Search -->
+                        <form class="search-form active" id="toursSearch">
+                            <div class="search-input">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" placeholder="Kenya, Tanzania, Uganda...">
+                            </div>
+                            <div class="search-input">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date">
+                            </div>
+                            <div class="search-input">
+                                <i class="fas fa-users"></i>
+                                <select>
+                                    <option>1 Traveler</option>
+                                    <option>2 Travelers</option>
+                                    <option>3-5 Travelers</option>
+                                    <option>6+ Group</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-search"></i> Search Safaris
+                            </button>
+                        </form>
+                        
+                        <!-- Lodge Search -->
+                        <form class="search-form" id="hotelsSearch">
+                            <div class="search-input">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" placeholder="Destination">
+                            </div>
+                            <div class="search-input">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" placeholder="Check-in">
+                            </div>
+                            <div class="search-input">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date" placeholder="Check-out">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-search"></i> Search Lodges
+                            </button>
+                        </form>
+                        
+                        <!-- Flight Search -->
+                        <form class="search-form" id="flightsSearch">
+                            <div class="search-input">
+                                <i class="fas fa-plane-departure"></i>
+                                <input type="text" placeholder="From">
+                            </div>
+                            <div class="search-input">
+                                <i class="fas fa-plane-arrival"></i>
+                                <input type="text" placeholder="To">
+                            </div>
+                            <div class="search-input">
+                                <i class="fas fa-calendar"></i>
+                                <input type="date">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-search"></i> Search Flights
+                            </button>
+                        </form>
+                        
+                        <!-- Visa Search -->
+                        <form class="search-form" id="visaSearch">
+                            <div class="search-input">
+                                <i class="fas fa-globe-africa"></i>
+                                <input type="text" placeholder="Destination Country">
+                            </div>
+                            <div class="search-input">
+                                <i class="fas fa-id-card"></i>
+                                <select>
+                                    <option>Tourist Visa</option>
+                                    <option>Business Visa</option>
+                                    <option>East Africa Visa</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-large">
+                                <i class="fas fa-search"></i> Check Requirements
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="section services-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">What We Offer</span>
+                <h2 class="section-title">Our <span class="text-gradient">Services</span></h2>
+                <p class="section-subtitle">Everything you need for your perfect East African adventure</p>
+            </div>
+            
+            <div class="grid grid-4 services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Wildlife Safaris</h3>
+                    <p>Expert-guided safaris across Kenya, Tanzania, Uganda, Rwanda & Congo with professional wildlife guides.</p>
+                    <a href="safaris.html" class="btn btn-outline">Explore Safaris</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <h3>Safari Lodges</h3>
+                    <p>Authentic safari lodges and tented camps in the heart of East Africa's national parks.</p>
+                    <a href="hotels.html" class="btn btn-outline">Book Lodges</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Flight Tickets</h3>
+                    <p>Domestic and international flights to East Africa's major airports and safari destinations.</p>
+                    <a href="flights.html" class="btn btn-outline">Book Flights</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>Visa Processing</h3>
+                    <p>East Africa visa assistance for Kenya, Tanzania, Uganda, Rwanda & Congo.</p>
+                    <a href="visa.html" class="btn btn-outline">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FEATURED SAFARIS ==================== -->
+    <section class="section featured-tours-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">Popular Adventures</span>
+                <h2 class="section-title">Featured <span class="text-gradient">Safaris</span></h2>
+                <p class="section-subtitle">Handpicked safari experiences across East Africa's most spectacular destinations</p>
+            </div>
+            
+            <div class="grid grid-3 tours-grid">
+                <!-- Kenya Safari -->
+                <div class="tour-card card">
+                    <div class="tour-image">
+                        <img src="images/kenya/img1.jpg" alt="Kenya Wildlife Safari" class="card-img" loading="lazy">
+                        <div class="tour-badge">Popular</div>
+                        <div class="tour-price">$1,299</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 7 Days</span>
+                            <span><i class="fas fa-star"></i> 4.9 (128)</span>
+                        </div>
+                        <h3 class="card-title">Kenya Wildlife Safari</h3>
+                        <p class="card-text">Experience the Big Five in Maasai Mara, Amboseli, and Lake Nakuru with expert wildlife guides.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-hotel"></i> Safari Lodge</span>
+                            <span><i class="fas fa-utensils"></i> Meals</span>
+                            <span><i class="fas fa-binoculars"></i> Game Drives</span>
+                        </div>
+                        <a href="tour-details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Tanzania Safari -->
+                <div class="tour-card card">
+                    <div class="tour-image">
+                        <img src="images/tanzania/img8.jpg" alt="Tanzania Serengeti Safari" class="card-img" loading="lazy">
+                        <div class="tour-badge hot">Hot Deal</div>
+                        <div class="tour-price">$999</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 5 Days</span>
+                            <span><i class="fas fa-star"></i> 4.8 (95)</span>
+                        </div>
+                        <h3 class="card-title">Tanzania Serengeti Safari</h3>
+                        <p class="card-text">Witness the Great Migration in Serengeti and explore the Ngorongoro Crater.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-campground"></i> Tented Camp</span>
+                            <span><i class="fas fa-utensils"></i> Meals</span>
+                            <span><i class="fas fa-user-tie"></i> Guide</span>
+                        </div>
+                        <a href="tour-details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Uganda Gorilla -->
+                <div class="tour-card card">
+                    <div class="tour-image">
+                        <img src="images/uganda/img15.jpg" alt="Uganda Gorilla Trekking" class="card-img" loading="lazy">
+                        <div class="tour-badge">New</div>
+                        <div class="tour-price">$1,599</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 6 Days</span>
+                            <span><i class="fas fa-star"></i> 5.0 (42)</span>
+                        </div>
+                        <h3 class="card-title">Uganda Gorilla Trekking</h3>
+                        <p class="card-text">Trek through Bwindi Impenetrable Forest to encounter mountain gorillas.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-hotel"></i> Lodge</span>
+                            <span><i class="fas fa-hiking"></i> Trekking</span>
+                            <span><i class="fas fa-ticket-alt"></i> Permits</span>
+                        </div>
+                        <a href="tour-details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Rwanda -->
+                <div class="tour-card card">
+                    <div class="tour-image">
+                        <img src="images/rwanda/img22.jpg" alt="Rwanda Safari" class="card-img" loading="lazy">
+                        <div class="tour-badge">Featured</div>
+                        <div class="tour-price">$1,799</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 4 Days</span>
+                            <span><i class="fas fa-star"></i> 4.9 (156)</span>
+                        </div>
+                        <h3 class="card-title">Rwanda Gorilla Experience</h3>
+                        <p class="card-text">Trek through Volcanoes National Park to encounter mountain gorillas in Rwanda.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-hotel"></i> Lodge</span>
+                            <span><i class="fas fa-hiking"></i> Trekking</span>
+                            <span><i class="fas fa-ticket-alt"></i> Permits</span>
+                        </div>
+                        <a href="tour-details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Congo -->
+                <div class="tour-card card">
+                    <div class="tour-image">
+                        <img src="images/congo/img29.jpg" alt="Congo Wildlife Adventure" class="card-img" loading="lazy">
+                        <div class="tour-badge">Adventure</div>
+                        <div class="tour-price">$2,299</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 8 Days</span>
+                            <span><i class="fas fa-star"></i> 4.7 (89)</span>
+                        </div>
+                        <h3 class="card-title">Congo Wildlife Adventure</h3>
+                        <p class="card-text">Explore Virunga National Park and encounter mountain gorillas in the DRC.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-campground"></i> Camp</span>
+                            <span><i class="fas fa-hiking"></i> Trekking</span>
+                            <span><i class="fas fa-user-tie"></i> Guide</span>
+                        </div>
+                        <a href="tour-details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Kenya Beach -->
+                <div class="tour-card card">
+                    <div class="tour-image">
+                        <img src="images/kenya/img2.jpg" alt="Kenya Safari & Beach" class="card-img" loading="lazy">
+                        <div class="tour-badge">Beach</div>
+                        <div class="tour-price">$1,499</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tour-meta">
+                            <span><i class="fas fa-clock"></i> 6 Days</span>
+                            <span><i class="fas fa-star"></i> 4.8 (112)</span>
+                        </div>
+                        <h3 class="card-title">Kenya Safari & Beach</h3>
+                        <p class="card-text">Combine wildlife safari in Tsavo with relaxation on Kenya's pristine beaches.</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-umbrella-beach"></i> Resort</span>
+                            <span><i class="fas fa-utensils"></i> Meals</span>
+                            <span><i class="fas fa-binoculars"></i> Game Drives</span>
+                        </div>
+                        <a href="tour-details.html" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="tours.html" class="btn btn-outline btn-large">View All Safaris</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DESTINATIONS ==================== -->
+    <section class="section destinations-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">Where We Go</span>
+                <h2 class="section-title">Safari <span class="text-gradient">Destinations</span></h2>
+                <p class="section-subtitle">Explore East Africa's most spectacular wildlife destinations</p>
+            </div>
+            
+            <div class="grid grid-4 destinations-grid">
+                <div class="destination-card">
+                    <img src="images/kenya/img3.jpg" alt="Kenya" loading="lazy">
+                    <div class="destination-overlay">
+                        <h3>🇰🇪 Kenya</h3>
+                        <p>Maasai Mara, Amboseli, Tsavo</p>
+                        <a href="safaris.html" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="images/tanzania/img9.jpg" alt="Tanzania" loading="lazy">
+                    <div class="destination-overlay">
+                        <h3>🇹🇿 Tanzania</h3>
+                        <p>Serengeti, Ngorongoro, Zanzibar</p>
+                        <a href="safaris.html" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="images/uganda/img16.jpg" alt="Uganda" loading="lazy">
+                    <div class="destination-overlay">
+                        <h3>🇺🇬 Uganda</h3>
+                        <p>Bwindi, Queen Elizabeth, Murchison</p>
+                        <a href="safaris.html" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="images/rwanda/img23.jpg" alt="Rwanda" loading="lazy">
+                    <div class="destination-overlay">
+                        <h3>🇷🇼 Rwanda</h3>
+                        <p>Volcanoes NP, Akagera, Nyungwe</p>
+                        <a href="safaris.html" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <section class="section why-choose-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">Why Us</span>
+                <h2 class="section-title">Why Choose <span class="text-gradient">TaraTours</span></h2>
+                <p class="section-subtitle">We make your travel dreams come true with expertise and care</p>
+            </div>
+            
+            <div class="grid grid-4 features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Safe & Secure</h4>
+                    <p>Your safety is our priority with verified partners and 24/7 support</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h4>Best Prices</h4>
+                    <p>Competitive pricing with no hidden fees and best value packages</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Round-the-clock customer support for all your travel needs</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>Expert Guides</h4>
+                    <p>Professional local guides with years of safari experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-label">Reviews</span>
+                <h2 class="section-title">What Our <span class="text-gradient">Travelers Say</span></h2>
+                <p class="section-subtitle">Real experiences from real travelers</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The gorilla trekking in Uganda was a life-changing experience! TaraTours made everything seamless from permits to accommodation. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=1" alt="Sarah Johnson">
+                        <div>
+                            <h5>Sarah Johnson</h5>
+                            <span>Uganda Gorilla Trek</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Witnessing the Great Migration in Serengeti was beyond words! The team's expertise and attention to detail made this the trip of a lifetime."</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=12" alt="Michael Chen">
+                        <div>
+                            <h5>Michael Chen</h5>
+                            <span>Tanzania Safari</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best travel agency for East Africa! They found us amazing lodges and our guide knew every animal by name. Will definitely book again!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=5" alt="Emily Rodriguez">
+                        <div>
+                            <h5>Emily Rodriguez</h5>
+                            <span>Kenya Safari Package</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Subscribe to Safari Updates</h2>
+                    <p>Get exclusive deals, travel tips, and safari news delivered to your inbox</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-large">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-paw"></i> TaraTours</h3>
+                    <p>Your trusted partner for unforgettable East African safari experiences. We provide comprehensive travel solutions including safaris, lodges, flights, and visa services.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="safaris.html">Safari Tours</a></li>
+                        <li><a href="hotels.html">Safari Lodges</a></li>
+                        <li><a href="flights.html">Flight Tickets</a></li>
+                        <li><a href="visa.html">Visa Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Destinations</h3>
+                    <ul class="footer-links">
+                        <li><a href="safaris.html">Kenya Safaris</a></li>
+                        <li><a href="safaris.html">Tanzania Safaris</a></li>
+                        <li><a href="safaris.html">Uganda Gorilla Treks</a></li>
+                        <li><a href="safaris.html">Rwanda Tours</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +256 703 900 937</li>
+                        <li><i class="fas fa-envelope"></i> info@taratours.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 8AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 TaraTours. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary-color);"></i> for adventurers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/256703900937" target="_blank" class="whatsapp-link">
+            <div class="whatsapp-tooltip">Need Help? Chat with us!</div>
+            <div class="whatsapp-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

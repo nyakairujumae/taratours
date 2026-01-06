@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hassle-free visa processing services for destinations worldwide">
+  <title>Visa Processing - TaraTours</title>
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="images/logo/logo.png" alt="TaraTours Logo" class="brand-logo">
+        TaraTours
+      </a>
+      
+      <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="hotels.html">Hotels</a></li>
+        <li><a href="flights.html">Flights</a></li>
+        <li><a href="visa.html" class="active">Visa</a></li>
+        <li><a href="safaris.html">Safaris</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" class="btn btn-primary">Book Now</a></li>
+      </ul>
+      
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Visa Processing Services</h1>
+      <p>Fast, easy, and hassle-free visa assistance for your travel needs</p>
+    </div>
+  </section>
+
+  <!-- Visa Checker Section -->
+  <section class="section visa-checker-section">
+    <div class="container">
+      <div class="visa-checker-card">
+        <h2>Check Visa Requirements</h2>
+        <p>Select your destination and visa type to get started</p>
+        
+        <div class="visa-checker-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Destination Country</label>
+              <div class="search-input">
+                <i class="fas fa-globe"></i>
+                <input type="text" placeholder="Search for a country..." list="countries">
+                <datalist id="countries">
+                  <option value="United States">
+                  <option value="United Kingdom">
+                  <option value="Canada">
+                  <option value="Australia">
+                  <option value="Germany">
+                  <option value="France">
+                  <option value="Japan">
+                  <option value="Dubai (UAE)">
+                  <option value="Singapore">
+                  <option value="Thailand">
+                </datalist>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Visa Type</label>
+              <div class="search-input">
+                <i class="fas fa-id-card"></i>
+                <select>
+                  <option>Tourist Visa</option>
+                  <option>Business Visa</option>
+                  <option>Student Visa</option>
+                  <option>Work Visa</option>
+                  <option>Transit Visa</option>
+                  <option>Family/Visit Visa</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label>Your Nationality</label>
+              <div class="search-input">
+                <i class="fas fa-flag"></i>
+                <input type="text" placeholder="Your country...">
+              </div>
+            </div>
+          </div>
+          
+          <button class="btn btn-accent btn-large">
+            <i class="fas fa-search"></i> Check Requirements
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Visa Destinations -->
+  <section class="section popular-visas-section">
+    <div class="container">
+      <h2 class="section-title">Popular Visa Destinations</h2>
+      <p class="section-subtitle">Quick access to most requested visa services</p>
+      
+      <div class="grid grid-4">
+        <div class="visa-destination-card">
+          <div class="visa-flag">🇺🇸</div>
+          <h3>United States</h3>
+          <p>Tourist & Business Visas</p>
+          <ul class="visa-info-list">
+            <li><i class="fas fa-clock"></i> 15-20 Days</li>
+            <li><i class="fas fa-dollar-sign"></i> From $160</li>
+          </ul>
+          <button class="btn btn-outline">Apply Now</button>
+        </div>
+        
+        <div class="visa-destination-card">
+          <div class="visa-flag">🇬🇧</div>
+          <h3>United Kingdom</h3>
+          <p>Visit & Business Visas</p>
+          <ul class="visa-info-list">
+            <li><i class="fas fa-clock"></i> 10-15 Days</li>
+            <li><i class="fas fa-dollar-sign"></i> From $145</li>
+          </ul>
+          <button class="btn btn-outline">Apply Now</button>
+        </div>
+        
+        <div class="visa-destination-card">
+          <div class="visa-flag">🇨🇦</div>
+          <h3>Canada</h3>
+          <p>Tourist & eTA Services</p>
+          <ul class="visa-info-list">
+            <li><i class="fas fa-clock"></i> 8-12 Days</li>
+            <li><i class="fas fa-dollar-sign"></i> From $100</li>
+          </ul>
+          <button class="btn btn-outline">Apply Now</button>
+        </div>
+        
+        <div class="visa-destination-card">
+          <div class="visa-flag">🇦🇺</div>
+          <h3>Australia</h3>
+          <p>Visitor & Work Visas</p>
+          <ul class="visa-info-list">
+            <li><i class="fas fa-clock"></i> 10-20 Days</li>
+            <li><i class="fas fa-dollar-sign"></i> From $140</li>
+          </ul>
+          <button class="btn btn-outline">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visa Services Section -->
+  <section class="section visa-services-section">
+    <div class="container">
+      <h2 class="section-title">Our Visa Services</h2>
+      <p class="section-subtitle">Comprehensive visa assistance from start to finish</p>
+      
+      <div class="grid grid-3">
+        <div class="visa-service-card">
+          <div class="service-icon-large">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>Document Preparation</h3>
+          <p>Expert guidance on preparing all required documents, ensuring nothing is missed for your visa application.</p>
+        </div>
+        
+        <div class="visa-service-card">
+          <div class="service-icon-large">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <h3>Application Assistance</h3>
+          <p>Complete support in filling out forms correctly, avoiding common mistakes that lead to rejections.</p>
+        </div>
+        
+        <div class="visa-service-card">
+          <div class="service-icon-large">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h3>Appointment Booking</h3>
+          <p>We handle scheduling your embassy appointments and help you prepare for visa interviews.</p>
+        </div>
+        
+        <div class="visa-service-card">
+          <div class="service-icon-large">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h3>Fast Processing</h3>
+          <p>Express processing options available for urgent travel plans with expedited services.</p>
+        </div>
+        
+        <div class="visa-service-card">
+          <div class="service-icon-large">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>Dedicated Support</h3>
+          <p>Personal visa consultant assigned to guide you through every step of the application process.</p>
+        </div>
+        
+        <div class="visa-service-card">
+          <div class="service-icon-large">
+            <i class="fas fa-redo"></i>
+          </div>
+          <h3>Resubmission Help</h3>
+          <p>If your visa was rejected, we help identify issues and assist with reapplication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section how-it-works-section">
+    <div class="container">
+      <h2 class="section-title">How Our Visa Process Works</h2>
+      <p class="section-subtitle">Simple 4-step process to get your visa approved</p>
+      
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Choose Your Destination</h3>
+            <p>Select the country you want to visit and the type of visa you need</p>
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Submit Documents</h3>
+            <p>Upload required documents through our secure portal or visit our office</p>
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>We Process & Apply</h3>
+            <p>Our experts review and submit your application to the relevant embassy</p>
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Receive Your Visa</h3>
+            <p>Track your application status and receive your approved visa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section visa-why-choose">
+    <div class="container">
+      <h2 class="section-title">Why Choose TaraTours for Visa Services</h2>
+      
+      <div class="grid grid-4 features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4>98% Success Rate</h4>
+          <p>Industry-leading approval rate with expert application review</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>50,000+ Visas Processed</h4>
+          <p>Extensive experience in handling visa applications worldwide</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4>Secure & Confidential</h4>
+          <p>Your documents and personal information are completely safe</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <h4>Best Price Guarantee</h4>
+          <p>Competitive pricing with transparent fees and no hidden charges</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="visa-cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Start Your Visa Application?</h2>
+        <p>Let our experts handle the paperwork while you plan your trip</p>
+        <div class="cta-buttons">
+          <button class="btn btn-accent btn-large">Start Application</button>
+          <button class="btn btn-outline btn-large">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-plane-departure"></i> TaraTours</h3>
+          <p>Your trusted partner for unforgettable travel experiences.</p>
+          <div class="footer-social">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="tours.html">Tours & Packages</a></li>
+            <li><a href="hotels.html">Hotel Booking</a></li>
+            <li><a href="flights.html">Flight Tickets</a></li>
+            <li><a href="visa.html">Visa Services</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@taratours.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 TaraTours. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- JavaScript -->
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/256703900937" target="_blank" class="whatsapp-link">
+      <div class="whatsapp-tooltip">Need Help? Chat with us</div>
+      <div class="whatsapp-icon">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+
+
