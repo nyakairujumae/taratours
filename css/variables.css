@@ -1,56 +1,56 @@
 /* ==========================================
    TARATOURS - CSS VARIABLES
-   Modern Safari Theme
+   Modern Teal & Amber Theme
    ========================================== */
 
 :root {
     /* ========== COLOR PALETTE ========== */
     
-    /* Primary - Safari Orange/Amber */
-    --primary-color: #d97706;
-    --primary-light: #f59e0b;
-    --primary-dark: #b45309;
+    /* Primary - Teal */
+    --primary-color: #0d9488;
+    --primary-light: #14b8a6;
+    --primary-dark: #0f766e;
     
-    /* Accent - Deep Forest Green */
-    --accent-color: #166534;
-    --accent-light: #22c55e;
-    --accent-dark: #14532d;
+    /* Accent - Warm Amber */
+    --accent-color: #f59e0b;
+    --accent-light: #fbbf24;
+    --accent-dark: #d97706;
     
-    /* Neutrals - Warm tones */
-    --color-bg: #0f0f0d;
-    --color-bg-elevated: #1a1917;
-    --color-bg-card: #1f1e1b;
-    --color-bg-card-hover: #2a2824;
-    --color-surface: #252420;
+    /* Background Colors (Dark Theme) */
+    --color-bg: #0a0f0f;
+    --color-bg-elevated: #111818;
+    --color-bg-card: #151d1d;
+    --color-bg-card-hover: #1a2424;
+    --color-surface: #1e2828;
     
     /* Text Colors */
-    --color-text: #faf9f7;
-    --color-text-secondary: #a8a5a0;
-    --color-text-muted: #6b6860;
+    --color-text: #f0fdfa;
+    --color-text-secondary: #99a3a3;
+    --color-text-muted: #6b7575;
     
     /* Borders */
-    --color-border: #3a3830;
-    --color-border-light: #4a4840;
+    --color-border: #2a3636;
+    --color-border-light: #3a4848;
     
     /* Legacy variables for compatibility */
     --white: #ffffff;
     --black: #000000;
-    --gray-50: #fafaf9;
-    --gray-100: #f5f5f4;
-    --gray-200: #e7e5e4;
-    --gray-300: #d6d3d1;
-    --gray-400: #a8a29e;
-    --gray-500: #78716c;
-    --gray-600: #57534e;
-    --gray-700: #44403c;
-    --gray-800: #292524;
-    --gray-900: #1c1917;
+    --gray-50: #f0fdfa;
+    --gray-100: #ccfbf1;
+    --gray-200: #99f6e4;
+    --gray-300: #5eead4;
+    --gray-400: #2dd4bf;
+    --gray-500: #14b8a6;
+    --gray-600: #0d9488;
+    --gray-700: #0f766e;
+    --gray-800: #115e59;
+    --gray-900: #134e4a;
     
     /* Semantic Colors */
-    --success-color: #22c55e;
+    --success-color: #14b8a6;
     --warning-color: #f59e0b;
     --error-color: #ef4444;
-    --info-color: #3b82f6;
+    --info-color: #0d9488;
     
     /* Background */
     --bg-primary: var(--color-bg);
@@ -64,9 +64,9 @@
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
     --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
-    --gradient-text: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-light) 100%);
-    --gradient-hero: linear-gradient(135deg, rgba(217, 119, 6, 0.9) 0%, rgba(22, 101, 52, 0.9) 100%);
-    --gradient-bg: radial-gradient(ellipse at 50% 0%, rgba(217, 119, 6, 0.15) 0%, transparent 50%);
+    --gradient-text: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+    --gradient-hero: linear-gradient(135deg, rgba(13, 148, 136, 0.9) 0%, rgba(245, 158, 11, 0.9) 100%);
+    --gradient-bg: radial-gradient(ellipse at 50% 0%, rgba(13, 148, 136, 0.15) 0%, transparent 50%);
     
     /* ========== TYPOGRAPHY ========== */
     --font-primary: 'Syne', sans-serif;
@@ -137,7 +137,7 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
     --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.3);
     --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.4);
-    --shadow-glow: 0 0 40px rgba(217, 119, 6, 0.3);
+    --shadow-glow: 0 0 40px rgba(13, 148, 136, 0.3);
     
     /* ========== TRANSITIONS ========== */
     --transition-fast: 0.15s ease;
@@ -155,9 +155,9 @@
     --z-tooltip: 700;
 }
 
-/* Dark mode is default - light mode override if needed */
+/* Dark mode is default */
 @media (prefers-color-scheme: light) {
     :root {
-        /* Keep dark theme for safari aesthetic */
+        /* Keep dark theme */
     }
 }
