@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - TaraTours</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="admin-body">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <div class="sidebar-header">
+            <img src="../images/logo/logo.png" alt="TaraTours" class="sidebar-logo">
+            <h2>TaraTours</h2>
+            <p>Admin Panel</p>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="#hero" class="nav-item" data-section="hero">
+                <i class="fas fa-video"></i> Hero Section
+            </a>
+            <a href="#services" class="nav-item" data-section="services">
+                <i class="fas fa-concierge-bell"></i> Services
+            </a>
+            <a href="#safaris" class="nav-item" data-section="safaris">
+                <i class="fas fa-paw"></i> Safaris
+            </a>
+            <a href="#destinations" class="nav-item" data-section="destinations">
+                <i class="fas fa-map-marked-alt"></i> Destinations
+            </a>
+            <a href="#testimonials" class="nav-item" data-section="testimonials">
+                <i class="fas fa-comments"></i> Testimonials
+            </a>
+            <a href="#about" class="nav-item" data-section="about">
+                <i class="fas fa-info-circle"></i> About Page
+            </a>
+            <a href="#contact" class="nav-item" data-section="contact">
+                <i class="fas fa-envelope"></i> Contact Info
+            </a>
+            <a href="#navigation" class="nav-item" data-section="navigation">
+                <i class="fas fa-bars"></i> Navigation
+            </a>
+            <a href="#settings" class="nav-item" data-section="settings">
+                <i class="fas fa-cog"></i> Settings
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <a href="../index.html" target="_blank" class="btn-view-site">
+                <i class="fas fa-external-link-alt"></i> View Site
+            </a>
+            <button class="btn-logout" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="admin-main">
+        <header class="admin-header">
+            <h1 id="pageTitle">Dashboard</h1>
+            <div class="header-actions">
+                <button class="btn-save" id="saveBtn" style="display: none;">
+                    <i class="fas fa-save"></i> Save Changes
+                </button>
+            </div>
+        </header>
+        
+        <div class="admin-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard-section" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(13, 148, 136, 0.1);">
+                            <i class="fas fa-paw" style="color: var(--primary-color);"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="safarisCount">0</h3>
+                            <p>Total Safaris</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(245, 158, 11, 0.1);">
+                            <i class="fas fa-concierge-bell" style="color: var(--accent-color);"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="servicesCount">4</h3>
+                            <p>Services</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(34, 197, 94, 0.1);">
+                            <i class="fas fa-map-marked-alt" style="color: #22c55e;"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="destinationsCount">6</h3>
+                            <p>Destinations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: rgba(139, 92, 246, 0.1);">
+                            <i class="fas fa-comments" style="color: #8b5cf6;"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="testimonialsCount">0</h3>
+                            <p>Testimonials</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="actions-grid">
+                        <a href="#safaris" class="action-card" data-section="safaris">
+                            <i class="fas fa-plus-circle"></i>
+                            <h3>Add New Safari</h3>
+                            <p>Create a new safari package</p>
+                        </a>
+                        <a href="#services" class="action-card" data-section="services">
+                            <i class="fas fa-edit"></i>
+                            <h3>Edit Services</h3>
+                            <p>Update service information</p>
+                        </a>
+                        <a href="#hero" class="action-card" data-section="hero">
+                            <i class="fas fa-video"></i>
+                            <h3>Update Hero</h3>
+                            <p>Change hero section content</p>
+                        </a>
+                        <a href="#testimonials" class="action-card" data-section="testimonials">
+                            <i class="fas fa-comment-dots"></i>
+                            <h3>Add Testimonial</h3>
+                            <p>Add customer review</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Hero Section Editor -->
+            <section id="hero-section" class="content-section">
+                <h2>Hero Section Editor</h2>
+                <form id="heroForm" class="admin-form">
+                    <div class="form-group">
+                        <label>Badge Text</label>
+                        <input type="text" id="heroBadge" placeholder="East Africa's Premier Safari Experts">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Main Title (Line 1)</label>
+                        <input type="text" id="heroTitle1" placeholder="Discover">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Main Title (Line 2 - Gradient Text)</label>
+                        <input type="text" id="heroTitle2" placeholder="East Africa's">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Main Title (Line 3)</label>
+                        <input type="text" id="heroTitle3" placeholder="Untamed Wildlife">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Subtitle</label>
+                        <textarea id="heroSubtitle" rows="3" placeholder="Experience the magic..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Hero Video</label>
+                        <input type="file" id="heroVideo" accept="video/*">
+                        <small>Current: images/vid1.mp4</small>
+                    </div>
+                </form>
+            </section>
+            
+            <!-- Services Editor -->
+            <section id="services-section" class="content-section">
+                <div class="section-header-bar">
+                    <h2>Services Management</h2>
+                    <button class="btn-add" id="addServiceBtn">
+                        <i class="fas fa-plus"></i> Add Service
+                    </button>
+                </div>
+                
+                <div id="servicesList" class="items-list">
+                    <!-- Services will be loaded here -->
+                </div>
+            </section>
+            
+            <!-- Safaris Editor -->
+            <section id="safaris-section" class="content-section">
+                <div class="section-header-bar">
+                    <h2>Safaris Management</h2>
+                    <button class="btn-add" id="addSafariBtn">
+                        <i class="fas fa-plus"></i> Add Safari
+                    </button>
+                </div>
+                
+                <div id="safarisList" class="items-list">
+                    <!-- Safaris will be loaded here -->
+                </div>
+            </section>
+            
+            <!-- Destinations Editor -->
+            <section id="destinations-section" class="content-section">
+                <div class="section-header-bar">
+                    <h2>Destinations Management</h2>
+                    <button class="btn-add" id="addDestinationBtn">
+                        <i class="fas fa-plus"></i> Add Destination
+                    </button>
+                </div>
+                
+                <div id="destinationsList" class="items-list">
+                    <!-- Destinations will be loaded here -->
+                </div>
+            </section>
+            
+            <!-- Testimonials Editor -->
+            <section id="testimonials-section" class="content-section">
+                <div class="section-header-bar">
+                    <h2>Testimonials Management</h2>
+                    <button class="btn-add" id="addTestimonialBtn">
+                        <i class="fas fa-plus"></i> Add Testimonial
+                    </button>
+                </div>
+                
+                <div id="testimonialsList" class="items-list">
+                    <!-- Testimonials will be loaded here -->
+                </div>
+            </section>
+            
+            <!-- About Page Editor -->
+            <section id="about-section" class="content-section">
+                <h2>About Page Editor</h2>
+                <form id="aboutForm" class="admin-form">
+                    <div class="form-group">
+                        <label>Story Title</label>
+                        <input type="text" id="aboutStoryTitle" placeholder="Our Story Our Pride">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Story Description</label>
+                        <textarea id="aboutStoryDesc" rows="5"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" id="aboutCompanyName" placeholder="TaraTours">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Company Description</label>
+                        <textarea id="aboutCompanyDesc" rows="5"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Vision</label>
+                        <textarea id="aboutVision" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Mission</label>
+                        <textarea id="aboutMission" rows="3"></textarea>
+                    </div>
+                </form>
+            </section>
+            
+            <!-- Contact Editor -->
+            <section id="contact-section" class="content-section">
+                <h2>Contact Information</h2>
+                <form id="contactForm" class="admin-form">
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="contactPhone" placeholder="+256 703 900 937">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="contactEmail" placeholder="info@taratours.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea id="contactAddress" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>WhatsApp Number</label>
+                        <input type="tel" id="contactWhatsApp" placeholder="+256703900937">
+                    </div>
+                </form>
+            </section>
+            
+            <!-- Navigation Editor -->
+            <section id="navigation-section" class="content-section">
+                <h2>Navigation Menu</h2>
+                <form id="navigationForm" class="admin-form">
+                    <div id="navItemsList" class="items-list">
+                        <!-- Navigation items will be loaded here -->
+                    </div>
+                    <button type="button" class="btn-add" id="addNavItemBtn">
+                        <i class="fas fa-plus"></i> Add Menu Item
+                    </button>
+                </form>
+            </section>
+            
+            <!-- Settings -->
+            <section id="settings-section" class="content-section">
+                <h2>Site Settings</h2>
+                <form id="settingsForm" class="admin-form">
+                    <div class="form-group">
+                        <label>Site Title</label>
+                        <input type="text" id="siteTitle" placeholder="TaraTours">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Site Description (Meta)</label>
+                        <textarea id="siteDescription" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Site Keywords (Meta)</label>
+                        <input type="text" id="siteKeywords" placeholder="safari, tours, east africa">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Logo</label>
+                        <input type="file" id="siteLogo" accept="image/*">
+                        <small>Current: images/logo/logo.png</small>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Modals -->
+    <div id="modalOverlay" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Edit Item</h3>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel" id="cancelModal">Cancel</button>
+                <button class="btn-save" id="saveModal">Save</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/admin.js"></script>
+    <script src="js/admin-auth.js"></script>
+</body>
+</html>

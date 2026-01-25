@@ -257,13 +257,24 @@ img {
     height: var(--navbar-height);
     z-index: var(--z-sticky);
     transition: all var(--transition-base);
+    background: rgba(15, 23, 20, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Transparent navbar only on home page hero section when at top */
+.navbar.home-page:not(.scrolled) {
     background: transparent;
+    border-bottom: none;
+    box-shadow: none;
 }
 
 .navbar.scrolled {
-    background: rgba(15, 15, 13, 0.95);
+    background: rgba(15, 23, 20, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .container {

@@ -17,14 +17,34 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 function initNavbar() {
     const navbar = document.getElementById('navbar');
+    const hasHeroSection = document.querySelector('.hero-section');
     
+    // Add home-page class if on home page (has hero section)
+    if (hasHeroSection) {
+        navbar.classList.add('home-page');
+    }
+    
+    // On non-home pages (no hero section), make navbar scrolled by default
+    if (!hasHeroSection) {
+        navbar.classList.add('scrolled');
+    }
+    
+    // Handle scroll events
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
-            navbar.classList.remove('scrolled');
+            // Only remove scrolled class on home page (has hero section)
+            if (hasHeroSection) {
+                navbar.classList.remove('scrolled');
+            }
         }
     });
+    
+    // Also check on page load in case page is already scrolled
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    }
 }
 
 // ==========================================
